@@ -1,0 +1,82 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4 padLeft13">
+    <h1 class="txt-color-blueDark">
+      <i class="fa fa-database fa-fw"></i>Manage Sources</h1>
+  </div>
+  <div class="col-xs-12 col-sm-5 col-md-5 col-lg-8">
+    <ul id="sparks">
+      <li class="sparks-info">
+        <h5>Total Sources
+          <span class="txt-color-blue ng-binding">1</span>
+        </h5>
+      </li>
+      <li class="sparks-info">
+        <h5>
+          <span class="txt-color-blue"></span>
+        </h5>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="panel-group smart-accordion-default" id="Div1" style="margin-top: 10px;"> 
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-lg-7 col-md-4 col-sm-4 col-xs-12 ">
+          <h1>
+            <i class="fa fw fa-table" style="margin-right:5px"></i>All Sources</h1>
+        </div>
+        <div class="col-lg-5 col-md-8 col-sm-8 col-xs-12">
+          <div class="row">
+            <div class="custom-padding-searchBox col-lg-6 col-md-6 col-sm-5 col-xs-9">
+              <div id="Div3" class="custom-dataTables_filter">
+                <label>
+                  <span class="input-group-addon">
+                    <i class="glyphicon glyphicon-search"></i>
+                  </span>
+                  <input type="text" placeholder="Search" class="form-control ng-pristine ng-valid">
+                </label>
+              </div>
+            </div>
+            <div class="custom-padding-6 col-lg-4 col-md-4 col-sm-4 col-xs-6">
+              <a class="btn btn-primary" (click)="addNewSource()">
+                <i class="fa fa-plus"></i>
+                Add New Source
+              </a>
+            </div>
+            <div class="col-lg-1 col-md-2 col-sm-3 col-xs-6">
+              <button class="btn dropdown-toggle btn-sm btn-default" data-toggle="dropdown" style="margin-top:6px;">
+                <i class="fa fa-gear fa-lg"></i>
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <ul class="dropdown-menu js-status-update ">
+                <li class="custom-color-white">
+                  <a id="mt">
+                    <i class="fa fa-save"></i>Save grid layout</a>
+                </li>
+                <li class="custom-color-white">
+                  <a id="ag">
+                    <i class="fa fa-refresh"></i>Refresh grid layout</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <p-dataTable [value]="sourceTableMenu" [loading]="false">
+  <p-column *ngFor="let source of sourceTableMenu" field="" [sortable]="true" [filter]="true" header="Source Name"></p-column>
+    <p-column field="" [sortable]="true" [filter]="true" header="Category"></p-column>
+    <p-column field="" [sortable]="true" [filter]="true" header="Login ID"></p-column>
+    <p-column field="" [sortable]="true" [filter]="true" header="Description"></p-column>
+    <p-column field="" [sortable]="true" [filter]="true" header="Server Name"></p-column>
+    <p-column field="" [sortable]="true" [filter]="true" header="Source Type"></p-column>
+
+</p-dataTable> -->
+
+<p-dataTable [value]="sourceTableMenu">
+  <p-column *ngFor="let col of sourceTableMenu" [field]="col.field" [header]="col.header"></p-column>
+</p-dataTable>

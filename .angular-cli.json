@@ -1,0 +1,83 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "report-management-tool"
+  },
+  "apps": [{
+    "root": "src",
+    "outDir": "dist",
+    "assets": [
+      "assets",
+      "favicon.ico"
+    ],
+    "index": "index.html",
+    "main": "main.ts",
+    "polyfills": "polyfills.ts",
+    "test": "test.ts",
+    "tsconfig": "tsconfig.app.json",
+    "testTsconfig": "tsconfig.spec.json",
+    "prefix": "app",
+    "styles": [
+      "styles.css",
+      "./assets/css/demo.min.css",
+      "./assets/css/invoice.min.css",
+      "./assets/css/lockscreen.min.css",
+      "./assets/css/smartadmin-rtl.min.css",
+      "./assets/css/smartadmin-skins.css",
+      "./assets/css/smartadmin-skins.min.css",
+      "./assets/css/your_style.css",
+      "../node_modules/font-awesome/css/font-awesome.min.css",
+      "../node_modules/primeng/resources/themes/omega/theme.css",
+      "../node_modules/primeng/resources/primeng.min.css"
+    ],
+    "scripts": [
+      "./assets/js/libs/jquery-2.0.2.min.js",
+      "./assets/js/libs/jquery-ui-1.10.3.min.js",
+      "./assets/js/app.config.js",
+      "./assets/js/plugin/jquery-touch/jquery.ui.touch-punch.min.js",
+      "./assets/js/bootstrap/bootstrap.min.js",
+      "./assets/js/notification/SmartNotification.min.js",
+      "./assets/js/smartwidgets/jarvis.widget.min.js",
+      "./assets/js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js",
+      "./assets/js/plugin/sparkline/jquery.sparkline.min.js",
+      "./assets/js/plugin/jquery-validate/jquery.validate.min.js",
+      "./assets/js/plugin/masked-input/jquery.maskedinput.min.js",
+      "./assets/js/plugin/bootstrap-slider/bootstrap-slider.min.js",
+      "./assets/js/plugin/msie-fix/jquery.mb.browser.min.js",
+      "./assets/js/plugin/fastclick/fastclick.min.js",
+      "./assets/js/app.min.js"
+    ],
+    "environmentSource": "environments/environment.ts",
+    "environments": {
+      "dev": "environments/environment.ts",
+      "prod": "environments/environment.prod.ts"
+    }
+  }],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [{
+      "project": "src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "src/tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+}

@@ -1,0 +1,44 @@
+<aside id="left-panel">
+
+        <!-- User info -->
+        <div class="login-info">
+            <span>
+                <!-- User image size is adjusted inside CSS, it should stay as is -->
+
+                <a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
+                    <img alt="me" class="online" style="width:28px;height:25px;" />
+                    <span>
+                    </span>
+                    <i class="fa fa-angle-down"></i>
+                </a>
+
+            </span>
+        </div>
+      
+        <nav>
+          
+
+            <ul>
+                <li *ngFor="let panel of leftPanelMenu" [ngClass]="{'active': panel.isActive}" style="cursor:pointer">
+                    <a (click)="onClickLeftMenuPanel(panel)" title="User"><i class="{{panel.iconClass}}"></i><span class="menu-item-parent">{{panel.title}}</span></a>
+                </li>
+                <!--<li >
+                    <a href="/#/application" title="Application"><i class="fa fa-lg fa-fw fa-group"></i><span class="menu-item-parent">Applications</span></a>
+                </li>
+                <li>
+                    <a href="/#/company" title="Company"><i class="fa fa-lg fa-fw fa-building"></i><span class="menu-item-parent">Companies</span></a>
+                </li>
+                <li>
+                    <a href="/#/useraccess" title="User Access Log"><i class="fa fa-lg fa-fw fa-history"></i><span class="menu-item-parent">User Access</span></a>
+                </li>
+                <li>
+                    <a href="/#/reportaccess" title="Report Access Log"><i class="fa fa-lg fa-fw fa-info-circle"></i><span class="menu-item-parent">Report Access</span></a>
+                </li>
+                <li>
+                    <a href="/#/installs" title="Install Add-In"><i class="fa fa-lg fa-fw fa-cube"></i><span class="menu-item-parent">Install Add-Ins</span></a>
+                </li>-->
+            </ul>
+        </nav>
+        <span class="minifyme" data-action="minifyMenu"><i class="fa fa-arrow-circle-left hit"></i></span>
+
+    </aside>
